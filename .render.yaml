@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-downloader-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python @all_thing_downloader_bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
